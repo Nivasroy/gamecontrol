@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Control</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .controls {
+      display: grid;
+      grid-template-columns: 80px 80px 80px;
+      grid-gap: 10px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .btn {
+      background: #444;
+      color: #fff;
+      border: none;
+      font-size: 18px;
+      padding: 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      background: #666;
+    }
+
+    .wide-btn {
+      grid-column: span 3;
+      background: #2a9d8f;
+    }
+
+    .wide-btn:hover {
+      background: #21867a;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Game Controls</h2>
+
+  <div class="controls">
+    <div></div>
+    <button class="btn" onclick="move('up')">⬆️</button>
+    <div></div>
+
+    <button class="btn" onclick="move('left')">⬅️</button>
+    <button class="btn" onclick="move('down')">⬇️</button>
+    <button class="btn" onclick="move('right')">➡️</button>
+
+    <button class="btn wide-btn" onclick="startGame()">▶️ Start</button>
+    <button class="btn wide-btn" onclick="resetGame()">🔄 Reset</button>
+  </div>
+
+  <script>
+    function move(direction) {
+      alert("Move: " + direction);
+      // Here you can add game logic (character movement, etc.)
+    }
+
+    function startGame() {
+      alert("Game Started!");
+    }
+
+    function resetGame() {
+      alert("Game Reset!");
+    }
+  </script>
+
+</body>
+</html>
